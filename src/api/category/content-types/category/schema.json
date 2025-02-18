@@ -15,8 +15,8 @@
     "name": {
       "type": "string",
       "required": true,
-      "maxLength": 5,
-      "minLength": 100
+      "maxLength": 100,
+      "minLength": 5
     },
     "products": {
       "type": "relation",

@@ -81,6 +81,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order.order"
+    },
+    "userRole": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "customer"
+      ],
+      "required": true
     }
   }
 }

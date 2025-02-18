@@ -424,8 +424,8 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 5;
-        minLength: 100;
+        maxLength: 100;
+        minLength: 5;
       }>;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
@@ -1086,6 +1086,8 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
+    userRole: Schema.Attribute.Enumeration<['admin', 'customer']> &
+      Schema.Attribute.Required;
   };
 }
 
